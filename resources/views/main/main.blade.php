@@ -1,7 +1,9 @@
-@extends('/layout')
+@extends('layout')
+
 @section('content')
-<p>
-         <span>welkome!</span>
-         
-    </p>
+    <h1>Articles</h1>
+
+    @foreach($articles as $article)
+    <p>{{ $article['date'] }}</p>
+    @endforeach
 @endsection
