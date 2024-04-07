@@ -35,7 +35,7 @@
     <body class="antialiased">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-        <a class="navbar-brand" href="#">News</a>
+        <a class="navbar-brand" href="/">News</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -45,7 +45,7 @@
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Contacts</a>
+          <a class="nav-link" href="/contacts">Contacts</a>
         </li>
         <!-- <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -59,15 +59,22 @@
           </ul>
         </li> -->
       </ul>
-      <form class="d-flex">
+      <form class="d-flex justify-content-end" action="/create" method="get">
         <button class="btn btn-outline-success" type="submit">Sign in</button>
       </form>
+      <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="/auth/registr">Регистрация</a>
+          </li>       
+          <li class="nav-item">
+            <a class="nav-link" href="/auth/login">Вход</a>
+          </li>       
     </div>
   </div>
 </nav>
 <div class="container">
     @yield('content')
 </div>
-    
+<footer class="bg-light text-center text-lg-start"> <div> Корабельский Ярослав Вячеславович 221-321</div></footer>
     </body>
 </html>
