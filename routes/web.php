@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\GalleryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,13 +15,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('main.main');
-});
+// Route::get('/', function () {
+//     return view('main.main');
+// });
+
+
+Route::get('/', [MainController::class, 'index'])->name('home');
+
+Route::get('/gallery/{image}', [GalleryController::class, 'show'])->name('gallery');
 
 Route::get('contacts', function () {
     $contact = [
-        'name'=> 'Polytech',
+        'name'=> 'Yaroslaw',
         'adress' => 'B.Semenovskaya',
         'phone' => '8(495)223-3322'
     ];
