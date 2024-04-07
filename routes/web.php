@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,7 +22,8 @@ use App\Http\Controllers\AuthController;
 Route::get('/create', [AuthController::class, 'create']);
 Route::post('/registr', [AuthController::class, 'registr']);
 
-
+//Article
+Route::resource('/article', ArticleController::class,);
 
 // Route::get('/', function () {
 //     return view('main.main');
