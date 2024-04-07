@@ -13,7 +13,10 @@ class AuthController extends Controller
 
     public function registr(Request $request)
     {
-        var_dump($request->name);
-        var_dump(request('name'));
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required|email|unique:App\Models\User',
+            'password' => 'required|min:6',
+        ]);
     }
 }
