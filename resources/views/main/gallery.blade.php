@@ -1,6 +1,5 @@
 @extends('layout')
-
 @section('content')
-    <h1>Gallery</h1>
-    <img src="{{ asset($image) }}" alt="Image">
+<h1>Gallery</h1>
+    <img src="{{URL::asset($full)}}" alt="">
 @endsection
