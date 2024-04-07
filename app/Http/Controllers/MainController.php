@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 
 class MainController extends Controller
@@ -10,5 +11,9 @@ class MainController extends Controller
     {
         $articles = json_decode(file_get_contents(public_path().'/articles.json'));
         return view('main.main', ['articles' => $articles]);
+    }
+    public function show($image)
+    {
+        return view('main.gallery', ['image' => $image]);
     }
 }

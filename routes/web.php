@@ -22,7 +22,8 @@ use App\Http\Controllers\GalleryController;
 
 Route::get('/', [MainController::class, 'index'])->name('home');
 
-Route::get('/gallery/{image}', [GalleryController::class, 'show'])->name('gallery');
+Route::get('/gallery/{image}', [MainController::class, 'show'])->name('gallery');
+
 
 Route::get('contacts', function () {
     $contact = [

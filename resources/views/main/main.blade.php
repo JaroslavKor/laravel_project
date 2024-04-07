@@ -5,12 +5,11 @@
     <table class="table">
         <thead>
             <tr>
-                <th scope="col">#</th>
-                <th scope="col">name</th>
                 <th scope="col">date</th>
-                <th scope="col">image</th>
+                <th scope="col">name</th>
                 <th scope="col">shortDesc</th>
                 <th scope="col">desc</th>
+                <th scope="col">image</th>
             </tr>
         </thead>
         <tbody>
@@ -21,8 +20,7 @@
                         <td>{{ $article->name }}</td>
                         <td>{{ $article->shortDesc ?? '' }}</td>
                         <td>{{ $article->desc }}</td>
-                        <td><a href="{{ route('gallery', ['image' => $article->full_image]) }}">{{ $article->preview_image }}</a></td>
-                    </tr>
+                        <td><a href="/gallery/{{ $article->full_image }}"> <img src="{{ asset('images/' . $article->preview_image) }}" alt="" height="100" width="100"></a></td>
                 @endforeach
             @else
                 <tr>
