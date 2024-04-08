@@ -2,7 +2,7 @@
 @section('content')
 
 @if($errors->any())
-<div class="alert alert-danger">
+  <div class="alert alert-danger">
     <ul>
         @foreach($errors->all() as $error)
             <li>
@@ -10,11 +10,11 @@
             </li>
         @endforeach 
     </ul>
-</div>
-@endif
+  </div>
+  @endif
 
-<form action="/article" method="post ">
-    @csrf
+  <form action="/article" method="POST">
+  @csrf
     <div class="mb-3">
         <label for="date" class="form-label">Дата</label>
         <input type="date" class="form-control" id="date" name="date">

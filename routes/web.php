@@ -2,7 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
-use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ArticleController;
 
@@ -23,6 +22,7 @@ Route::get('/create', [AuthController::class, 'create']);
 Route::post('/registr', [AuthController::class, 'registr']);
 
 //Article
+Route::get('/', [ArticleController::class, 'index']);
 Route::resource('/article', ArticleController::class,);
 
 // Route::get('/', function () {
