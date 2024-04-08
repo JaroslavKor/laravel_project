@@ -16,7 +16,7 @@ class ArticleFactory extends Factory
         return [
             'date' => $this->faker->date(),
             'name' => $this->faker->sentence(),
-            'shortDesc' => $this->faker->text(),
+            'shortDesc' => $this->faker->paragraph(),
             'desc' => $this->faker->text(),
             'authorId' => '1'
         ];

@@ -16,9 +16,20 @@
 <div class="card" style="width: 18rem;">
   <div class="card-body">
     <h5 class="card-title">{{$article->name}}</h5>
-    <h6 class="card-subtitle mb-2 text-body-secondary">{{$article->shor_desc}}</h6>
+    <h6 class="card-subtitle mb-2 text-body-secondary">{{$article->short_desc}}</h6>
     <p class="card-text">{{$article->desc}}</p>
     <a href="/article/{{$article->id}}/edit" class="btn btn-info">Обновить статью</a>
   </div>
 </div>
+
+<h2 class="text-center">Комментарии</h2>
+  @foreach($comments as $comment)
+  <div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{$comment->title}}</h5>
+    <h6 class="card-subtitle mb-2 text-body-secondary">{{$comment->text}}</h6>
+    <a href="/article/{{$article->id}}/edit" class="btn btn-info">Обновить статью</a>
+  </div>
+</div>
+  @endforeach
 @endsection
