@@ -63,7 +63,14 @@
         </li> -->
       </ul>
       <form class="d-flex justify-content-end" action="/create" method="get">
-        <button class="btn btn-outline-success" type="submit">Sign in</button>
+    @guest
+    <a href="/create" class="btn btn-outline-success">Register</a>
+    <a href="/login" class="btn btn-outline-success">Sign in</a>
+    @endguest
+    @auth
+    <a href="/logout" class="btn btn-outline-success">Sign out</a>
+    @endauth
+</form>
       </form>
     </div>
   </div>

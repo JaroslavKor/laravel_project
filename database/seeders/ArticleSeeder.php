@@ -19,9 +19,9 @@ class ArticleSeeder extends Seeder
         foreach ($articles as $article){
             Article::create([
                 "name" => $article->name,
-                "short_desc" => $article->shortDesc,
+                "shortDesc" => isset($article->shortDesc) ? $article->shortDesc : null,
                 "desc" => $article->desc,
-                'author_id' => '1'
+                'authorId' => '1'
             ]);
         }
     }
