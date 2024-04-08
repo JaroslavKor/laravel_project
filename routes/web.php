@@ -25,6 +25,7 @@ Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'customLogin']);
 Route::get('/logout', [AuthController::class, 'logout']);
 
+
 //Article
 Route::get('/', [ArticleController::class, 'index']);
 Route::resource('/article', ArticleController::class,);
